@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300;
+    margin: 0;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+  }
+
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  ::-moz-selection {
+    @apply bg-primary-200 dark:bg-primary-800;
+  }
+  
+  ::selection {
+    @apply bg-primary-200 dark:bg-primary-800;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100 px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 dark:bg-gray-900/10 backdrop-blur-md border border-white/20 dark:border-gray-700/20;
+  }
+  
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+/* Smooth scrolling for all elements */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid theme('colors.primary.500');
+  outline-offset: 2px;
+}
+
+/* Fix overlapping components */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 4rem; /* Add padding to account for fixed navbar */
+}
+
+.section-spacing {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix button overlapping */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .btn-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Fix social icons spacing */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Fix profile image positioning */
+.profile-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem; /* Add top margin to create space from navbar */
+}
+
+.profile-image {
+  position: relative;
+  z-index: 2;
+}
+
+.status-indicator {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  z-index: 3;
+}
+
+/* Ensure navbar doesn't overlap content */
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.dark .navbar-fixed {
+  background: rgba(17, 24, 39, 0.8);
+}
+
+/* Hero content spacing */
+.hero-content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Section spacing to prevent overlaps */
+section {
+  position: relative;
+  z-index: 1;
+}
+
+section:not(:first-child) {
+  margin-top: 2rem;
+}
+
+/* Ensure proper spacing for all sections */
+#about, #projects, #publications, #reeds, #paw-world, #cooking {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Fix scroll indicator positioning */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* Ensure proper stacking context */
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-30 { z-index: 30; }
+.z-40 { z-index: 40; }
+.z-50 { z-index: 50; }
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* MonoLisa */
+
+@font-face {
+    font-family: "MonolisaLight";
+    src: local("MonolisaLight"),
+        url(../public/fonts/MonoLisa/MonoLisa-Thin.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "MonolisaRegular";
+    src: local("MonolisaRegular"),
+        url(../public/fonts/MonoLisa/MonoLisa-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "MonoLisaMedium";
+    src: local("MonoLisaMedium"),
+        url(../public/fonts/MonoLisa/MonoLisa-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "MonoLisaBold";
+    src: local("MonoLisaBold"),
+        url(../public/fonts/MonoLisa/MonoLisa-Bold.ttf) format("truetype");
+}
+
+/* miscellaneous */
+
+@font-face {
+    font-family: "KScriptRegular";
+    src: local("KScriptRegular"),
+        url(../public/fonts/KScript/KScript-Regular.ttf) format("truetype");
+}

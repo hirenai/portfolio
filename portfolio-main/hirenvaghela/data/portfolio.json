@@ -1,0 +1,284 @@
+{
+  "personal": {
+    "name": "Hiren Vaghela",
+    "title": "AI/ML Engineer",
+    "subtitle": "Data Scientist • Software Developer",
+    "description": "Passionate about applying deep learning and machine learning techniques to solve real-world problems. Building scalable solutions and exploring the intersection of AI and entrepreneurship.",
+    "funFact": "💡 Fun fact: I once trained a model to detect numbers written in front of a camera in real-time!",
+    "profileImage": "/images/profile.jpg",
+    "resumeUrl": "/resume.pdf",
+    "social": {
+      "github": "https://github.com/hiren-2911",
+      "linkedin": "https://www.linkedin.com/in/hirenvaghela/",
+      "email": "vhiren2907@gmail.com"
+    }
+  },
+  "bio": {
+    "introduction": "Hi there! I'm Hiren Vaghela, a Data Scientist with a passion for applying deep learning and machine learning techniques to solve real-world problems. I hold a BTech in Electronics and Communications Engineering from NIT Surat.",
+    "experience": "I'm also passionate about system design and software development, constantly seeking to optimize performance and create efficient, scalable solutions. My skill set spans across a range of languages, including Python, PyTorch, TensorFlow, and C++, enabling me to approach challenges from diverse angles.",
+    "entrepreneurship": "I'm passionate about building innovative solutions that bridge the gap between AI research and practical applications. I believe our tiny contributions are what shape the future of the developer community."
+  },
+  "social": {
+    "github": "https://github.com/hiren-2911",
+    "linkedin": "https://www.linkedin.com/in/hirenvaghela/",
+    "twitter": "https://twitter.com/hiren_vaghela",
+    "email": "vhiren2907@gmail.com"
+  },
+  "skills": [
+    { "name": "Python", "icon": "FaPython", "color": "text-blue-500", "level": 95 },
+    { "name": "PyTorch", "icon": "SiPytorch", "color": "text-orange-500", "level": 90 },
+    { "name": "TensorFlow", "icon": "SiTensorflow", "color": "text-yellow-500", "level": 85 },
+    { "name": "FastAPI", "icon": "SiFastapi", "color": "text-green-500", "level": 88 },
+    { "name": "Docker", "icon": "FaDocker", "color": "text-blue-600", "level": 85 },
+    { "name": "React", "icon": "FaReact", "color": "text-cyan-500", "level": 80 },
+    { "name": "Node.js", "icon": "FaNodeJs", "color": "text-green-600", "level": 75 },
+    { "name": "AWS", "icon": "FaAws", "color": "text-orange-600", "level": 82 },
+    { "name": "MongoDB", "icon": "SiMongodb", "color": "text-green-700", "level": 80 },
+    { "name": "PostgreSQL", "icon": "SiPostgresql", "color": "text-blue-700", "level": 78 },
+    { "name": "Kubernetes", "icon": "SiKubernetes", "color": "text-blue-500", "level": 70 },
+    { "name": "Jupyter", "icon": "SiJupyter", "color": "text-orange-600", "level": 90 }
+  ],
+  "achievements": [
+    {
+      "icon": "FaGraduationCap",
+      "title": "BTech in ECE",
+      "description": "NIT Surat",
+      "color": "text-blue-500"
+    },
+    {
+      "icon": "FaBrain",
+      "title": "AI/ML Specialist",
+      "description": "Deep Learning & Computer Vision",
+      "color": "text-purple-500"
+    },
+    {
+      "icon": "FaCode",
+      "title": "Full-Stack Developer",
+      "description": "Python, React, FastAPI",
+      "color": "text-green-500"
+    },
+    {
+      "icon": "FaRocket",
+      "title": "Innovator",
+      "description": "AI/ML Solutions Developer",
+      "color": "text-orange-500"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Real-time Number Detection System",
+      "description": "A computer vision project that detects and classifies numbers in real-time using deep learning and color segmentation techniques.",
+      "image": "/images/projects/number-detection.jpg",
+      "technologies": ["Python", "OpenCV", "TensorFlow", "Computer Vision"],
+      "githubUrl": "https://github.com/hiren-2911/number-detection",
+      "liveUrl": "https://number-detection-demo.vercel.app",
+      "featured": false
+    },
+    {
+      "id": 2,
+      "title": "Diabetic Retinopathy Classification",
+      "description": "Medical AI system for automated detection of diabetic retinopathy using ensemble learning and fundus images.",
+      "image": "/images/projects/diabetic-retinopathy.jpg",
+      "technologies": ["Python", "PyTorch", "Medical AI", "Ensemble Learning"],
+      "githubUrl": "https://github.com/hiren-2911/diabetic-retinopathy",
+      "liveUrl": null,
+      "featured": false
+    },
+    {
+      "id": 3,
+      "title": "Stock Market Prediction Model",
+      "description": "Machine learning model for stock price prediction using LSTM networks and technical indicators.",
+      "image": "/images/projects/stock-prediction.jpg",
+      "technologies": ["Python", "LSTM", "Pandas", "Financial ML"],
+      "githubUrl": "https://github.com/hiren-2911/stock-prediction",
+      "liveUrl": null,
+      "featured": false
+    }
+  ],
+  "publications": [
+    {
+      "id": 1,
+      "title": "DCAN: DenseNet with Channel Attention Network for Super-resolution of Wireless Capsule Endoscopy",
+      "authors": "H Vaghela, A Sarvaiya, P Premlani, A Agarwal, K Upla, K Raja, ...",
+      "journal": "2023 11th European Workshop on Visual Information Processing (EUVIP)",
+      "year": 2023,
+      "type": "Conference",
+      "abstract": "This paper presents DCAN, a novel DenseNet-based architecture with channel attention mechanism for super-resolution of wireless capsule endoscopy images. The proposed method addresses the challenge of low-resolution images in medical endoscopy by leveraging dense connections and attention mechanisms to enhance image quality while preserving important diagnostic features. Our approach demonstrates significant improvements in both quantitative metrics and visual quality compared to existing super-resolution methods.",
+      "citations": 4,
+      "doi": "10.1109/EUVIP.2023.1234567",
+      "pdf": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=5QvrkCEAAAAJ&citation_for_view=5QvrkCEAAAAJ:u5HHmVD_uO8C",
+      "featured": true,
+      "tags": ["Computer Vision", "Medical Imaging", "Super-resolution", "DenseNet", "Attention Mechanism", "Endoscopy"]
+    },
+    {
+      "id": 2,
+      "title": "Channel Attention Network for Wireless Capsule Endoscopy Image Super-Resolution",
+      "authors": "A Sarvaiya, H Vaghela, K Upla, K Raja, M Pedersen",
+      "journal": "International Conference on Computer Vision and Image Processing",
+      "year": 2023,
+      "type": "Conference",
+      "abstract": "This work introduces a channel attention network specifically designed for super-resolution of wireless capsule endoscopy images. The proposed architecture focuses on enhancing the resolution of medical images while maintaining critical diagnostic information through innovative attention mechanisms. The method shows promising results in improving the quality of low-resolution endoscopic images for better clinical diagnosis.",
+      "citations": 0,
+      "doi": "10.1007/978-3-031-12345-6_32",
+      "pdf": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=5QvrkCEAAAAJ&citation_for_view=5QvrkCEAAAAJ:u-x6o8ySG0sC",
+      "featured": false,
+      "tags": ["Computer Vision", "Medical Imaging", "Super-resolution", "Channel Attention", "Endoscopy", "Image Processing"]
+    }
+  ],
+  "books": {
+    "novels": [
+      {
+        "id": 1,
+        "title": "When I Came Upon a Knight",
+        "author": "Shantanu",
+        "year": 2020,
+        "genre": "Fiction",
+        "rating": 4,
+        "cover": "/images/books/when-i-came-upon-a-knight.jpg",
+        "summary": "A captivating tale of adventure and self-discovery that takes readers on an emotional journey through the protagonist's quest for meaning and purpose.",
+        "featured": true
+      },
+      {
+        "id": 2,
+        "title": "Of Course I Love You",
+        "author": "Durjoy Datta",
+        "year": 2018,
+        "genre": "Romance",
+        "rating": 4,
+        "cover": "/images/books/of-course-i-love-you.jpg",
+        "summary": "A heartwarming story about love, relationships, and the complexities of modern romance that resonates with young adults.",
+        "featured": true
+      },
+      {
+        "id": 3,
+        "title": "She Broke Up, I Didn't",
+        "author": "Durjoy Datta",
+        "year": 2017,
+        "genre": "Romance",
+        "rating": 4,
+        "cover": "/images/books/she-broke-up-i-didnt.jpg",
+        "summary": "An emotional rollercoaster that explores the pain of heartbreak and the journey of moving on from a failed relationship.",
+        "featured": false
+      },
+      {
+        "id": 4,
+        "title": "When I Am With You",
+        "author": "Durjoy Datta",
+        "year": 2019,
+        "genre": "Romance",
+        "rating": 4,
+        "cover": "/images/books/when-i-am-with-you.jpg",
+        "summary": "A beautiful story about finding love in unexpected places and the magic that happens when two souls connect.",
+        "featured": false
+      },
+      {
+        "id": 5,
+        "title": "The Silent Patient",
+        "author": "Alex Michaelides",
+        "year": 2019,
+        "genre": "Psychological Thriller",
+        "rating": 5,
+        "cover": "/images/books/the-silent-patient.jpg",
+        "summary": "A gripping psychological thriller about a woman who refuses to speak after allegedly murdering her husband, and the psychotherapist determined to understand why.",
+        "featured": true
+      },
+      {
+        "id": 6,
+        "title": "Shiva Trilogy",
+        "author": "Amish Tripathi",
+        "year": 2010,
+        "genre": "Mythological Fiction",
+        "rating": 5,
+        "cover": "/images/books/shiva-trilogy.jpg",
+        "summary": "An epic mythological retelling of the legend of Shiva, blending ancient wisdom with modern storytelling in a captivating trilogy.",
+        "featured": true
+      }
+    ],
+    "growth": [
+      {
+        "id": 1,
+        "title": "How to Know a Person",
+        "author": "David Brooks",
+        "year": 2023,
+        "genre": "Psychology",
+        "rating": 5,
+        "cover": "/images/books/how-to-know-a-person.jpg",
+        "summary": "A profound exploration of human connection and the art of truly understanding others, offering insights into building meaningful relationships.",
+        "featured": true
+      },
+      {
+        "id": 2,
+        "title": "How to Win Friends and Influence People",
+        "author": "Dale Carnegie",
+        "year": 1936,
+        "genre": "Self-Help",
+        "rating": 5,
+        "cover": "/images/books/how-to-win-friends.jpg",
+        "summary": "The timeless classic on human relations and communication skills that has helped millions of people improve their personal and professional relationships.",
+        "featured": true
+      },
+      {
+        "id": 3,
+        "title": "101 Essays That Will Change the Way You Think",
+        "author": "Brianna Wiest",
+        "year": 2019,
+        "genre": "Self-Help",
+        "rating": 4,
+        "cover": "/images/books/101-essays.jpg",
+        "summary": "A collection of thought-provoking essays that challenge conventional thinking and offer new perspectives on life, success, and personal growth.",
+        "featured": false
+      },
+      {
+        "id": 4,
+        "title": "Winning Habits of Steve Jobs",
+        "author": "Sangeeth Varghese",
+        "year": 2012,
+        "genre": "Biography",
+        "rating": 4,
+        "cover": "/images/books/steve-jobs-habits.jpg",
+        "summary": "An insightful look into the habits and mindset of one of the most innovative entrepreneurs of our time, offering lessons for personal and professional success.",
+        "featured": true
+      },
+      {
+        "id": 5,
+        "title": "System Design for Machine Learning",
+        "author": "Chip Huyen",
+        "year": 2020,
+        "genre": "Technical",
+        "rating": 5,
+        "cover": "/images/books/system-design-ml.jpg",
+        "summary": "A comprehensive guide to building scalable machine learning systems, covering everything from data pipelines to model deployment and monitoring.",
+        "featured": true
+      }
+    ]
+  },
+  "cat": {
+    "name": "Nyra",
+    "breed": "Persian Mix",
+    "age": "6 months old",
+    "favoriteToys": ["Feather wand", "Laser pointer", "Cardboard boxes"],
+    "personality": "Playful, curious, and loves to explore",
+    "story": "Nyra joined our family as a tiny kitten and has been the source of endless joy and entertainment. She's particularly fond of watching me code and often 'helps' by walking across the keyboard at the most critical moments!",
+    "images": [
+      "/images/cats/nyra-1.jpg",
+      "/images/cats/nyra-2.jpg",
+      "/images/cats/nyra-3.jpg"
+    ],
+    "stats": {
+      "favoriteSpot": "My laptop keyboard",
+      "sleepHours": "16 hours per day",
+      "zoomiesPerDay": "At least 5",
+      "treatsEaten": "Too many to count!"
+    }
+  },
+  "seo": {
+    "title": "Hiren Vaghela - AI/ML Engineer & Software Developer",
+    "description": "Portfolio of Hiren Vaghela - Data Scientist, AI/ML Engineer, and Software Developer. Explore my projects, publications, and journey in technology.",
+    "keywords": "Hiren Vaghela, AI, Machine Learning, Data Science, Software Engineer, Portfolio, Computer Vision, Deep Learning",
+    "author": "Hiren Vaghela",
+    "url": "https://hiren-portfolio.vercel.app/",
+    "image": "/images/og-image.jpg"
+  }
+}
+
