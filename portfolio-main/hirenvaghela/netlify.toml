@@ -1,6 +1,7 @@
 [build]
+  base = "portfolio-main/hirenvaghela"
   command = "npm run build"
-  publish = "out"
+  publish = "portfolio-main/hirenvaghela/out"
 
 [build.environment]
   NODE_VERSION = "18"

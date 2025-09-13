@@ -48,6 +48,12 @@ try {
       console.log(`  - ${file}`);
     });
 
+    // Check Netlify deployment path
+    console.log('\n🌐 Netlify Deployment Path:');
+    console.log(`  Base directory: portfolio-main/hirenvaghela`);
+    console.log(`  Publish directory: portfolio-main/hirenvaghela/out`);
+    console.log(`  Full path to index.html: portfolio-main/hirenvaghela/out/index.html`);
+
     console.log('\n🎉 Build test completed successfully!');
     console.log('\n📋 Next steps:');
     console.log('  1. Push changes to your repository');
