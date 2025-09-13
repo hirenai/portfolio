@@ -21,7 +21,7 @@ export default function Footer() {
     { name: "Projects", href: "#projects" },
     { name: "Publications", href: "#publications" },
     { name: "Reeds", href: "#reeds" },
-    { name: "Paw World", href: "#paw-world" }
+    { name: " My Furry Co-Pilot", href: "#paw-world" }
   ];
 
   const socialLinks = [

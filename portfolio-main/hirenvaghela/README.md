@@ -13,7 +13,7 @@ A modern, responsive portfolio website built with Next.js, React, and Tailwind C
   - Projects showcase with filtering
   - Research publications
   - Books I've read (Reeds section)
-  - Paw World - Cat gallery featuring Nyra
+  -  My Furry Co-Pilot - Cat gallery featuring Nyra
   - Puzle startup story
 - **Accessibility**: Built with accessibility best practices
 - **SEO Optimized**: Meta tags and structured data
@@ -143,7 +143,7 @@ colors: {
 - Personal ratings and quotes
 - Reading statistics
 
-### 6. Paw World Section
+### 6.  My Furry Co-Pilot Section
 - Cat photo gallery
 - Nyra's stats and facts
 - Interactive photo modal

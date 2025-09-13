@@ -67,7 +67,7 @@ export default function PawWorld() {
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-mono-bold mb-4">
-              <span className="gradient-text">Paw World</span> 🐾
+              <span className="gradient-text"> My Furry Co-Pilot</span> 🐾
             </h2>
             <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
               Meet {catInfo.name}, my adorable feline companion who brings joy and chaos to my daily life
