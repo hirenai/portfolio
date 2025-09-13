@@ -5,15 +5,13 @@ const nextConfig = {
         appDir: false
     },
     // Configuration for static export
-    output: 'export',
     trailingSlash: true,
     swcMinify: true,
     compiler: {
         removeConsole: process.env.NODE_ENV === 'production',
     },
-    // Disable image optimization for static export
+    // Image optimization
     images: {
-        unoptimized: true,
         domains: ['images.unsplash.com', 'via.placeholder.com'],
     },
     // Disable ESLint during build for deployment
