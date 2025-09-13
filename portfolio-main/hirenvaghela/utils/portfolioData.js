@@ -50,6 +50,7 @@ export const getAchievements = () => portfolioData.achievements;
 export const getProjects = () => portfolioData.projects;
 export const getPublications = () => portfolioData.publications;
 export const getBooks = () => portfolioData.books;
+export const getWorkExperience = () => portfolioData.workExperience;
 export const getCatInfo = () => portfolioData.cat;
 export const getStartupInfo = () => portfolioData.startup;
 export const getSEOInfo = () => portfolioData.seo;
@@ -65,7 +66,12 @@ export const getIconComponent = async (iconName) => {
 // Helper function to get featured items
 export const getFeaturedProjects = () => portfolioData.projects.filter(project => project.featured);
 export const getFeaturedPublications = () => portfolioData.publications.filter(pub => pub.featured);
-export const getFeaturedBooks = () => portfolioData.books.filter(book => book.featured);
+export const getFeaturedBooks = () => {
+  const novels = portfolioData.books.novels || [];
+  const growth = portfolioData.books.growth || [];
+  return [...novels, ...growth].filter(book => book.featured);
+};
+export const getFeaturedWorkExperience = () => portfolioData.workExperience.filter(exp => exp.featured);
 
 // Helper function to get stats
 export const getPortfolioStats = () => ({
@@ -74,7 +80,8 @@ export const getPortfolioStats = () => ({
   totalPublications: portfolioData.publications.length,
   totalCitations: portfolioData.publications.reduce((sum, pub) => sum + pub.citations, 0),
   hIndex: 1, // From your Google Scholar
-  totalBooks: portfolioData.books.length,
+  totalBooks: (portfolioData.books.novels || []).length + (portfolioData.books.growth || []).length,
+  totalWorkExperience: portfolioData.workExperience.length,
   skillsCount: portfolioData.skills.length
 });
 

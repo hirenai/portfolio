@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { getBooks } from '../utils/portfolioData';
+import { BookCoverImage } from './ResizedImage';
 import { 
   FaStar, 
   FaFilter, 
@@ -193,8 +194,16 @@ export default function Reeds() {
               >
                 {/* Book Cover */}
                 <div className="mb-4">
-                  <div className="w-full h-64 bg-gradient-to-br from-primary-100 to-accent-100 dark:from-primary-900 dark:to-accent-900 rounded-lg flex items-center justify-center">
-                    <FaBookOpen className="w-16 h-16 text-primary-500 dark:text-primary-400" />
+                  <div className="w-full h-64 rounded-lg overflow-hidden relative bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                    <BookCoverImage
+                      src={book.cover}
+                      alt={`${book.title} cover`}
+                      className="w-full h-full transition-transform duration-300 hover:scale-105"
+                      style={{
+                        maxWidth: '100%',
+                        maxHeight: '100%'
+                      }}
+                    />
                   </div>
                 </div>
 

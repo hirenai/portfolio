@@ -14,9 +14,9 @@
     }
   },
   "bio": {
-    "introduction": "Hi there! I'm Hiren Vaghela, a Data Scientist with a passion for applying deep learning and machine learning techniques to solve real-world problems. I hold a BTech in Electronics and Communications Engineering from NIT Surat.",
+    "introduction": "I’ve always been curious about how intelligence works — human or artificial. That curiosity pulled me into AI, where I now spend my time building and experimenting. When I’m not debugging code, I’m usually on a hiking trail… or being bossed around by my cat, Nyra.",
     "experience": "I'm also passionate about system design and software development, constantly seeking to optimize performance and create efficient, scalable solutions. My skill set spans across a range of languages, including Python, PyTorch, TensorFlow, and C++, enabling me to approach challenges from diverse angles.",
-    "entrepreneurship": "I'm passionate about building innovative solutions that bridge the gap between AI research and practical applications. I believe our tiny contributions are what shape the future of the developer community."
+    "entrepreneurship": "At Puzles, I am reimagining how search works with AI. While others are busy building cursors for X, I am building a Perplexity for people search — a smarter way to connect brands with the right influencers. Just share your requirements and goals, and we will match you with the best voices to amplify your marketing. "
   },
   "social": {
     "github": "https://github.com/hiren-2911",
@@ -25,43 +25,43 @@
     "email": "vhiren2907@gmail.com"
   },
   "skills": [
-    { "name": "Python", "icon": "FaPython", "color": "text-blue-500", "level": 95 },
-    { "name": "PyTorch", "icon": "SiPytorch", "color": "text-orange-500", "level": 90 },
-    { "name": "TensorFlow", "icon": "SiTensorflow", "color": "text-yellow-500", "level": 85 },
-    { "name": "FastAPI", "icon": "SiFastapi", "color": "text-green-500", "level": 88 },
-    { "name": "Docker", "icon": "FaDocker", "color": "text-blue-600", "level": 85 },
-    { "name": "React", "icon": "FaReact", "color": "text-cyan-500", "level": 80 },
-    { "name": "Node.js", "icon": "FaNodeJs", "color": "text-green-600", "level": 75 },
-    { "name": "AWS", "icon": "FaAws", "color": "text-orange-600", "level": 82 },
-    { "name": "MongoDB", "icon": "SiMongodb", "color": "text-green-700", "level": 80 },
-    { "name": "PostgreSQL", "icon": "SiPostgresql", "color": "text-blue-700", "level": 78 },
-    { "name": "Kubernetes", "icon": "SiKubernetes", "color": "text-blue-500", "level": 70 },
-    { "name": "Jupyter", "icon": "SiJupyter", "color": "text-orange-600", "level": 90 }
+    { "name": "Python", "icon": "FaPython", "color": "text-white", "level": 95 },
+    { "name": "PyTorch", "icon": "SiPytorch", "color": "text-white/80", "level": 90 },
+    { "name": "TensorFlow", "icon": "SiTensorflow", "color": "text-white/70", "level": 85 },
+    { "name": "FastAPI", "icon": "SiFastapi", "color": "text-white/90", "level": 88 },
+    { "name": "Docker", "icon": "FaDocker", "color": "text-white/85", "level": 85 },
+    { "name": "React", "icon": "FaReact", "color": "text-white/75", "level": 80 },
+    { "name": "Node.js", "icon": "FaNodeJs", "color": "text-white/70", "level": 75 },
+    { "name": "AWS", "icon": "FaAws", "color": "text-white/80", "level": 82 },
+    { "name": "MongoDB", "icon": "SiMongodb", "color": "text-white/75", "level": 80 },
+    { "name": "PostgreSQL", "icon": "SiPostgresql", "color": "text-white/70", "level": 78 },
+    { "name": "Kubernetes", "icon": "SiKubernetes", "color": "text-white/80", "level": 70 },
+    { "name": "Jupyter", "icon": "SiJupyter", "color": "text-white/85", "level": 90 }
   ],
   "achievements": [
     {
       "icon": "FaGraduationCap",
       "title": "BTech in ECE",
       "description": "NIT Surat",
-      "color": "text-blue-500"
+      "color": "text-white"
     },
     {
       "icon": "FaBrain",
       "title": "AI/ML Specialist",
       "description": "Deep Learning & Computer Vision",
-      "color": "text-purple-500"
+      "color": "text-white/80"
     },
     {
       "icon": "FaCode",
       "title": "Full-Stack Developer",
       "description": "Python, React, FastAPI",
-      "color": "text-green-500"
+      "color": "text-white/90"
     },
     {
       "icon": "FaRocket",
       "title": "Innovator",
       "description": "AI/ML Solutions Developer",
-      "color": "text-orange-500"
+      "color": "text-white/85"
     }
   ],
   "projects": [
@@ -130,12 +130,12 @@
     "novels": [
       {
         "id": 1,
-        "title": "When I Came Upon a Knight",
-        "author": "Shantanu",
+        "title": "I Came Upon a Light House: A short Memoir of life with Ratan Tata",
+        "author": "Shantanu Naidu",
         "year": 2020,
         "genre": "Fiction",
         "rating": 4,
-        "cover": "/images/books/when-i-came-upon-a-knight.jpg",
+        "cover": "/images/when-i-came-upon-a-knight.jpg",
         "summary": "A captivating tale of adventure and self-discovery that takes readers on an emotional journey through the protagonist's quest for meaning and purpose.",
         "featured": true
       },
@@ -146,7 +146,7 @@
         "year": 2018,
         "genre": "Romance",
         "rating": 4,
-        "cover": "/images/books/of-course-i-love-you.jpg",
+        "cover": "/images/of-course-i-love-you.jpg",
         "summary": "A heartwarming story about love, relationships, and the complexities of modern romance that resonates with young adults.",
         "featured": true
       },
@@ -157,7 +157,7 @@
         "year": 2017,
         "genre": "Romance",
         "rating": 4,
-        "cover": "/images/books/she-broke-up-i-didnt.jpg",
+        "cover": "/images/she-broke-up-i-didnt.jpg",
         "summary": "An emotional rollercoaster that explores the pain of heartbreak and the journey of moving on from a failed relationship.",
         "featured": false
       },
@@ -168,7 +168,7 @@
         "year": 2019,
         "genre": "Romance",
         "rating": 4,
-        "cover": "/images/books/when-i-am-with-you.jpg",
+        "cover": "/images/when-i-am-with-you.jpg",
         "summary": "A beautiful story about finding love in unexpected places and the magic that happens when two souls connect.",
         "featured": false
       },
@@ -179,7 +179,7 @@
         "year": 2019,
         "genre": "Psychological Thriller",
         "rating": 5,
-        "cover": "/images/books/the-silent-patient.jpg",
+        "cover": "/images/the-silent-patient.jpg",
         "summary": "A gripping psychological thriller about a woman who refuses to speak after allegedly murdering her husband, and the psychotherapist determined to understand why.",
         "featured": true
       },
@@ -190,7 +190,7 @@
         "year": 2010,
         "genre": "Mythological Fiction",
         "rating": 5,
-        "cover": "/images/books/shiva-trilogy.jpg",
+        "cover": "/images/shiva-trilogy.jpg.webp",
         "summary": "An epic mythological retelling of the legend of Shiva, blending ancient wisdom with modern storytelling in a captivating trilogy.",
         "featured": true
       }
@@ -203,7 +203,7 @@
         "year": 2023,
         "genre": "Psychology",
         "rating": 5,
-        "cover": "/images/books/how-to-know-a-person.jpg",
+        "cover": "/images/how-to-know-a-person.jpg",
         "summary": "A profound exploration of human connection and the art of truly understanding others, offering insights into building meaningful relationships.",
         "featured": true
       },
@@ -214,7 +214,7 @@
         "year": 1936,
         "genre": "Self-Help",
         "rating": 5,
-        "cover": "/images/books/how-to-win-friends.jpg",
+        "cover": "/images/how-to-win-friends.jpg",
         "summary": "The timeless classic on human relations and communication skills that has helped millions of people improve their personal and professional relationships.",
         "featured": true
       },
@@ -225,7 +225,7 @@
         "year": 2019,
         "genre": "Self-Help",
         "rating": 4,
-        "cover": "/images/books/101-essays.jpg",
+        "cover": "/images/101-essays.jpg",
         "summary": "A collection of thought-provoking essays that challenge conventional thinking and offer new perspectives on life, success, and personal growth.",
         "featured": false
       },
@@ -236,7 +236,7 @@
         "year": 2012,
         "genre": "Biography",
         "rating": 4,
-        "cover": "/images/books/steve-jobs-habits.jpg",
+        "cover": "/images/steve-jobs-habits.jpg",
         "summary": "An insightful look into the habits and mindset of one of the most innovative entrepreneurs of our time, offering lessons for personal and professional success.",
         "featured": true
       },
@@ -247,19 +247,73 @@
         "year": 2020,
         "genre": "Technical",
         "rating": 5,
-        "cover": "/images/books/system-design-ml.jpg",
+        "cover": "/images/system-design-ml.jpg",
         "summary": "A comprehensive guide to building scalable machine learning systems, covering everything from data pipelines to model deployment and monitoring.",
         "featured": true
       }
     ]
   },
+  "workExperience": [
+    {
+      "id": 1,
+      "company": "VISA",
+      "position": "Software Engineer (AI/ML)",
+      "location": "Bangalore, IN",
+      "duration": "April 2025 - Present",
+      "type": "Full-time",
+      "description": "Working on GenAI platform development and model serving optimization, focusing on scalable AI solutions and performance improvements.",
+      "achievements": [
+        "Improved GenAI platform latency by 35% by integrating Claude, OpenAI, Gemini, and Grok into a scalable Model Service, enabling seamless access across 6+ internal applications",
+        "Boosted model serving performance by 40% through prompt caching, endpoint refactoring, and code tracking—reducing average inference time from 1200ms to 900ms",
+        "Streamlined observability and incident response by building Splunk dashboards for model usage, error rates, and system health—cutting MTTD (mean time to detect) by 50%",
+        "Designed and implemented an agentic framework to automate and streamline LLM model onboarding, enabling faster deployment and reducing manual intervention",
+        "Optimized integration testing pipeline by introducing multiprocessing and parallel execution strategies, reducing test execution time from 45 minutes to 6 minutes (7.5x improvement), thereby accelerating CI/CD workflows"
+      ],
+      "technologies": ["Python", "Claude", "OpenAI", "Gemini", "Grok", "Splunk", "Model Serving", "CI/CD", "Multiprocessing"],
+      "featured": true
+    },
+    {
+      "id": 2,
+      "company": "TVS Credit",
+      "position": "Software Engineer (AI/ML)",
+      "location": "Noida, IN",
+      "duration": "July 2023 - March 2025",
+      "type": "Full-time",
+      "description": "Developed production-grade ML systems for KYC document verification and API optimization, contributing to significant cost savings through automation.",
+      "achievements": [
+        "Built a production-grade KYC document verification system using PyTorch and OCR, achieving real-time processing at 0.5s/image for Aadhaar, PAN, and face liveliness, improving accuracy and cutting latency by 60%",
+        "Led delivery of 6 high-impact ML systems in under 12 months, including real-time KYC verification and async API pipelines—contributing to ₹2.5 Cr in annual cost savings through automation and performance optimization",
+        "Re-architected monolithic APIs into modular asynchronous services using Celery and Redis, increasing throughput by 60% and improving fault isolation and system observability"
+      ],
+      "technologies": ["Python", "PyTorch", "OCR", "Celery", "Redis", "KYC", "Aadhaar", "PAN", "Face Recognition", "Async APIs"],
+      "featured": true
+    },
+    {
+      "id": 3,
+      "company": "NTNU (Norwegian University of Science and Technology)",
+      "position": "Research Intern",
+      "location": "Trondheim, Norway",
+      "duration": "2022 - 2023",
+      "type": "Internship",
+      "description": "Conducted research on Single Image Super-Resolution (SISR) for Wireless Capsule Endoscopy Images under the mentorship of Dr. Kiran Raja and Dr. Marius Pederson.",
+      "achievements": [
+        "Delved into the intricate realm of Single Image Super-Resolution (SISR) for Wireless Capsule Endoscopy Images, a challenging and ill-posed problem",
+        "Harnessed the power of Deep Learning to address complex problem statements in medical image processing",
+        "Worked under expert mentorship of Dr. Kiran Raja and Dr. Marius Pederson, gaining invaluable insights and guidance",
+        "Explored various approaches and techniques to tackle SISR problems, expanding research horizons and toolkit",
+        "Contributed to innovative solutions in medical image super-resolution using advanced deep learning methodologies"
+      ],
+      "technologies": ["Python", "Deep Learning", "PyTorch", "TensorFlow", "Computer Vision", "Medical Imaging", "Super-Resolution", "Wireless Capsule Endoscopy"],
+      "featured": true
+    }
+  ],
   "cat": {
     "name": "Nyra",
     "breed": "Persian Mix",
     "age": "6 months old",
     "favoriteToys": ["Feather wand", "Laser pointer", "Cardboard boxes"],
     "personality": "Playful, curious, and loves to explore",
-    "story": "Nyra joined our family as a tiny kitten and has been the source of endless joy and entertainment. She's particularly fond of watching me code and often 'helps' by walking across the keyboard at the most critical moments!",
+    "story": "Meet Nyra — my fluffy Persian Himalayan sidekick and unofficial debugging assistant for the past six months. She is equal parts mischief and charm: one moment pouncing on her feather wand like a pro gamer, the next judging my code with those big curious eyes. When  am not buried in lines of logic, I am usually busy being her personal paparazzi. Honestly, she is the cutest bug I will never fix.",
     "images": [
       "/images/cats/nyra-1.jpg",
       "/images/cats/nyra-2.jpg",

@@ -86,15 +86,7 @@ export default function Navbar() {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2"
-          >
-            <Link href="/" className="text-2xl font-mono-bold gradient-text">
-              Hiren
-            </Link>
-          </motion.div>
+          {/* Logo - Removed for minimal design */}
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -104,7 +96,7 @@ export default function Navbar() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
+                className="text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white transition-colors duration-200 font-medium"
               >
                 {item.name}
               </motion.button>
@@ -119,7 +111,7 @@ export default function Navbar() {
               href="https://github.com/hiren-2911"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+              className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white transition-colors"
             >
               <FaGithub size={20} />
             </motion.a>
@@ -129,7 +121,7 @@ export default function Navbar() {
               href="https://www.linkedin.com/in/hirenvaghela/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
+              className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white transition-colors"
             >
               <FaLinkedin size={20} />
             </motion.a>
@@ -138,7 +130,7 @@ export default function Navbar() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={toggleTheme}
-                className="text-gray-600 dark:text-gray-400 hover:text-yellow-500 transition-colors p-2"
+                className="text-white/60 hover:text-white transition-colors p-2"
               >
                 {isDark ? <FaSun size={20} /> : <FaMoon size={20} />}
               </motion.button>
@@ -149,7 +141,7 @@ export default function Navbar() {
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-700 dark:text-gray-300 p-2"
+            className="md:hidden text-black/80 dark:text-white/80 p-2"
           >
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </motion.button>
@@ -170,7 +162,7 @@ export default function Navbar() {
                 key={item.name}
                 whileHover={{ x: 10 }}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium py-2"
+                className="block w-full text-left text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white transition-colors duration-200 font-medium py-2"
               >
                 {item.name}
               </motion.button>
@@ -195,7 +187,7 @@ export default function Navbar() {
               {hasMounted && (
                 <button
                   onClick={toggleTheme}
-                  className="text-gray-600 dark:text-gray-400 hover:text-yellow-500 transition-colors p-2"
+                  className="text-white/60 hover:text-white transition-colors p-2"
                 >
                   {isDark ? <FaSun size={20} /> : <FaMoon size={20} />}
                 </button>

@@ -36,37 +36,37 @@ export default function Cooking() {
       icon: FaBrain,
       title: "AI-Powered Solutions",
       description: "Advanced machine learning algorithms that adapt to user behavior and provide personalized puzzle experiences.",
-      color: "text-purple-500"
+      color: "text-slate-600"
     },
     {
       icon: FaCog,
       title: "Custom Puzzle Generation",
       description: "Generate unique puzzles tailored to specific difficulty levels, topics, and learning objectives.",
-      color: "text-blue-500"
+      color: "text-accent-600"
     },
     {
       icon: FaChartLine,
       title: "Analytics Dashboard",
       description: "Comprehensive analytics to track user progress, identify patterns, and optimize learning outcomes.",
-      color: "text-green-500"
+      color: "text-neutral-600"
     },
     {
       icon: FaShieldAlt,
       title: "Enterprise Security",
       description: "Bank-grade security with end-to-end encryption and compliance with industry standards.",
-      color: "text-red-500"
+      color: "text-slate-700"
     },
     {
       icon: FaMobile,
       title: "Cross-Platform",
       description: "Seamless experience across web, mobile, and desktop platforms with real-time synchronization.",
-      color: "text-orange-500"
+      color: "text-neutral-700"
     },
     {
       icon: FaUsers,
       title: "Collaborative Learning",
       description: "Team-based puzzle solving with real-time collaboration and competitive elements.",
-      color: "text-pink-500"
+      color: "text-accent-500"
     }
   ];
 

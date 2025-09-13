@@ -8,10 +8,98 @@
   }
   
   body {
-    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300;
+    @apply bg-white text-black dark:bg-black dark:text-white transition-colors duration-300;
     margin: 0;
     overflow-x: hidden;
     position: relative;
+    min-height: 100vh;
+  }
+
+  /* Signature Font Styles */
+  .font-signature {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+  }
+
+  .font-signature-elegant {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+  }
+
+  .font-signature-script {
+    font-family: 'Allura', cursive;
+    font-weight: 400;
+  }
+
+  .font-signature-brush {
+    font-family: 'Alex Brush', cursive;
+    font-weight: 400;
+  }
+
+  /* Snow Animation */
+  .snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 1em;
+    animation: fall linear infinite;
+    opacity: 0.8;
+  }
+
+  /* Light theme snowflakes */
+  .light .snowflake {
+    color: black;
+    opacity: 0.6;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-100vh) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  /* Custom Signature Styling */
+  .signature-text {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.5px;
+  }
+
+  .signature-text:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+
+  /* Elegant signature with curve effect */
+  .signature-elegant {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+    transform: rotate(-2deg);
+    display: inline-block;
   }
 
   * {
@@ -74,17 +162,22 @@
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 via-accent-600 to-pink-600 bg-clip-text text-transparent;
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease-in-out infinite;
+    color: black;
+    text-shadow: none;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .dark .gradient-text {
+    color: white;
   }
   
   .glass-effect {
-    @apply bg-white/10 dark:bg-gray-900/10 backdrop-blur-md border border-white/20 dark:border-gray-700/20;
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
   }
   
   .glass-card {
-    @apply bg-white/60 dark:bg-gray-800/60 backdrop-blur-md border border-white/20 dark:border-gray-700/20 shadow-xl;
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
   }
   
   .floating-animation {
@@ -125,7 +218,7 @@
   
   .gradient-border {
     position: relative;
-    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
+    background: linear-gradient(45deg, #ffffff, #cccccc, #ffffff);
     padding: 2px;
     border-radius: 12px;
   }
@@ -134,13 +227,9 @@
     content: '';
     position: absolute;
     inset: 2px;
-    background: white;
+    background: black;
     border-radius: 10px;
     z-index: -1;
-  }
-  
-  .dark .gradient-border::before {
-    background: #1f2937;
   }
 }
 
@@ -150,15 +239,15 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-100 dark:bg-gray-800;
+  @apply bg-black;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+  @apply bg-white/30 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-400 dark:bg-gray-500;
+  @apply bg-white/50;
 }
 
 /* Smooth scrolling for all elements */
@@ -267,12 +356,9 @@ html {
   left: 0;
   right: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
-}
-
-.dark .navbar-fixed {
-  background: rgba(17, 24, 39, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Hero content spacing */

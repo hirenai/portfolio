@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { getPersonalInfo } from '../utils/portfolioData';
+import { ProfileImage } from './ResizedImage';
 
 export default function SimpleHero() {
   const personalInfo = getPersonalInfo();
@@ -57,14 +58,14 @@ export default function SimpleHero() {
   return (
     <section className="hero-section relative overflow-hidden min-h-screen flex items-center">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" />
+      <div className="absolute inset-0 bg-white dark:bg-black" />
       
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-blue-400/30 dark:bg-blue-300/20 rounded-full"
+            className="absolute w-2 h-2 bg-black/20 dark:bg-white/20 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -85,7 +86,7 @@ export default function SimpleHero() {
       {/* Gradient Orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute w-96 h-96 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-3xl"
+          className="absolute w-96 h-96 bg-black/5 dark:bg-white/5 rounded-full blur-3xl"
           style={{
             left: mousePosition.x - 200,
             top: mousePosition.y - 200,
@@ -101,7 +102,7 @@ export default function SimpleHero() {
           }}
         />
         <motion.div
-          className="absolute w-64 h-64 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-2xl"
+          className="absolute w-64 h-64 bg-black/3 dark:bg-white/3 rounded-full blur-2xl"
           style={{
             right: mousePosition.x - 100,
             bottom: mousePosition.y - 100,
@@ -133,27 +134,22 @@ export default function SimpleHero() {
               animate="animate"
             >
               <motion.div 
-                className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 p-1 relative"
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-r from-black/20 to-black/40 dark:from-white/20 dark:to-white/40 p-1 relative"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="w-full h-full rounded-full bg-white dark:bg-gray-800 flex items-center justify-center relative overflow-hidden">
-                  <img
+                <div className="w-full h-full rounded-full bg-white dark:bg-black flex items-center justify-center relative overflow-hidden">
+                  <ProfileImage
                     src={personalInfo.profileImage}
                     alt={`${personalInfo.name} - ${personalInfo.title}`}
-                    className="w-full h-full object-cover rounded-full"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.nextSibling.style.display = 'flex';
-                    }}
+                    className="w-full h-full rounded-full"
+                    maxWidth={160}
+                    maxHeight={160}
                   />
-                  <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 flex items-center justify-center text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" style={{display: 'none'}}>
-                    {personalInfo.name.split(' ').map(n => n[0]).join('')}
-                  </div>
                   
                   {/* Animated Ring */}
                   <motion.div
-                    className="absolute inset-0 rounded-full border-2 border-blue-400/50"
+                    className="absolute inset-0 rounded-full border-2 border-black/30 dark:border-white/30"
                     animate={{ rotate: 360 }}
                     transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                   />
@@ -169,18 +165,7 @@ export default function SimpleHero() {
             variants={itemVariants}
           >
             <motion.span 
-              className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
-              animate={{
-                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              style={{
-                backgroundSize: "200% 200%",
-              }}
+              className="gradient-text"
             >
               {personalInfo.name}
             </motion.span>
@@ -188,7 +173,7 @@ export default function SimpleHero() {
 
           {/* Subtitle */}
           <motion.div 
-            className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4"
+            className="text-xl md:text-2xl text-black/80 dark:text-white/80 mb-4"
             variants={itemVariants}
           >
             {personalInfo.subtitle.split(' • ').map((item, index, array) => (
@@ -201,7 +186,7 @@ export default function SimpleHero() {
                 <span className="font-medium">{item}</span>
                 {index < array.length - 1 && (
                   <motion.span 
-                    className="mx-4 text-blue-500"
+                    className="mx-4 text-black/60 dark:text-white/60"
                     animate={{ rotate: [0, 180, 360] }}
                     transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
                   >
@@ -220,29 +205,6 @@ export default function SimpleHero() {
             {personalInfo.description}
           </motion.p>
 
-          {/* Fun Fact */}
-          <motion.div 
-            className="mb-8 p-6 bg-white/60 dark:bg-gray-800/60 rounded-2xl backdrop-blur-md border border-gray-200/50 dark:border-gray-700/50 max-w-md mx-auto shadow-lg"
-            variants={itemVariants}
-            whileHover={{ 
-              scale: 1.02,
-              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-            }}
-          >
-            <div className="flex items-center space-x-2 mb-2">
-              <motion.div
-                className="w-2 h-2 bg-blue-500 rounded-full"
-                animate={{ scale: [1, 1.5, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-              <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wide">
-                Fun Fact
-              </span>
-            </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">
-              {personalInfo.funFact}
-            </p>
-          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div 
@@ -251,7 +213,7 @@ export default function SimpleHero() {
           >
             <motion.a
               href="#about"
-              className="group relative bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 inline-flex items-center space-x-3 shadow-lg hover:shadow-xl"
+              className="group relative bg-black/10 hover:bg-black/20 dark:bg-white/10 dark:hover:bg-white/20 text-black dark:text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-black/50 dark:focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-black inline-flex items-center space-x-3 shadow-lg hover:shadow-xl border border-black/20 dark:border-white/20"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -266,13 +228,13 @@ export default function SimpleHero() {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </motion.svg>
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+              <div className="absolute inset-0 rounded-xl bg-black/10 dark:bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.a>
             
             <motion.a
               href={personalInfo.resumeUrl}
               download
-              className="group relative bg-white/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-800 text-gray-900 dark:text-gray-100 px-8 py-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 inline-flex items-center space-x-3 shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700"
+              className="group relative bg-white/80 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 text-gray-900 dark:text-gray-100 px-8 py-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 inline-flex items-center space-x-3 shadow-lg hover:shadow-xl border border-slate-200 dark:border-slate-700"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -314,7 +276,7 @@ export default function SimpleHero() {
               href={personalInfo.social?.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="social-icon text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-all duration-300 group"
+              className="social-icon text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white transition-all duration-300 group"
               aria-label="LinkedIn"
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
@@ -325,6 +287,17 @@ export default function SimpleHero() {
                 </svg>
               </div>
             </motion.a>
+          </motion.div>
+
+          {/* Fun Fact - Moved to top right */}
+          <motion.div 
+            className="absolute top-8 right-8 max-w-xs p-4 bg-black/10 dark:bg-white/10 rounded-lg backdrop-blur-sm border border-black/20 dark:border-white/20 shadow-lg"
+            variants={itemVariants}
+            whileHover={{ scale: 1.05 }}
+          >
+            <p className="text-sm text-black/70 dark:text-white/70 italic">
+              {personalInfo.funFact}
+            </p>
           </motion.div>
         </motion.div>
       </div>

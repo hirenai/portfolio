@@ -3,14 +3,15 @@ import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import SimpleHero from "@/components/SimpleHero";
 import About from "@/components/About";
+import WorkExperience from "@/components/WorkExperience";
 import Projects from "@/components/Projects";
 import Publications from "@/components/Publications";
 import Reeds from "@/components/Reeds";
 import PawWorld from "@/components/PawWorld";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import ScrollIndicator from "@/components/ScrollIndicator";
 import EnhancedLoading from "@/components/EnhancedLoading";
+import Snow from "@/components/Snow";
 import { getSEOInfo } from "@/utils/portfolioData";
 
 export default function Index() {
@@ -34,7 +35,7 @@ export default function Index() {
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
       <Head>
         <title>{seoInfo.title}</title>
         <meta name="description" content={seoInfo.description} />
@@ -60,20 +61,23 @@ export default function Index() {
         <link rel="canonical" href={seoInfo.url} />
       </Head>
 
+      {/* Snow Animation */}
+      <Snow />
+      
       <Navbar />
       
       <main>
         <SimpleHero />
         <About />
-        <Projects />
+        <WorkExperience />
         <Publications />
+        <Projects />
         <Reeds />
         <PawWorld />
       </main>
       
       <Footer />
       <ScrollToTop />
-      <ScrollIndicator />
     </div>
   );
 }

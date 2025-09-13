@@ -97,11 +97,11 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="section-padding bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
+    <section id="projects" className="section-padding bg-gradient-to-br from-white via-indigo-50/30 to-rose-50/30 dark:from-slate-900 dark:via-indigo-900/20 dark:to-slate-800 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-blue-200/20 dark:bg-blue-400/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-purple-200/20 dark:bg-purple-400/10 rounded-full blur-3xl" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-indigo-200/20 dark:bg-indigo-400/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-rose-200/20 dark:bg-rose-400/10 rounded-full blur-3xl" />
       </div>
       
       <div className="container-custom relative z-10">
@@ -114,14 +114,14 @@ export default function Projects() {
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
             <motion.div 
-              className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-full mb-6"
+              className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-indigo-100 to-rose-100 dark:from-indigo-900/30 dark:to-rose-900/30 rounded-full mb-6"
               whileHover={{ scale: 1.1, rotate: 5 }}
               transition={{ duration: 0.3 }}
             >
-              <FaCode className="w-10 h-10 text-blue-600 dark:text-blue-400" />
+              <FaCode className="w-10 h-10 text-indigo-600 dark:text-indigo-400" />
             </motion.div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              My <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Projects</span>
+              My <span className="bg-gradient-to-r from-indigo-600 via-rose-600 to-amber-500 bg-clip-text text-transparent">Projects</span>
             </h2>
             <motion.p 
               className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed"
@@ -129,7 +129,7 @@ export default function Projects() {
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              A curated collection of AI/ML and computer vision projects showcasing innovative solutions and technical expertise
+              
             </motion.p>
           </motion.div>
 
@@ -147,11 +147,11 @@ export default function Projects() {
                 key={project.id}
                 variants={itemVariants}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200/50 dark:border-gray-700/50"
+                className="group relative bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-neutral-200/50 dark:border-neutral-700/50"
               >
                 {/* Project Header with Icon */}
-                <div className="relative h-40 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-800 dark:via-purple-900/20 dark:to-pink-900/20 flex items-center justify-center overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-400/10 dark:to-purple-400/10" />
+                <div className="relative h-40 bg-gradient-to-br from-slate-50 via-neutral-50 to-slate-100 dark:from-slate-800 dark:via-neutral-800/20 dark:to-slate-700/20 flex items-center justify-center overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-slate-500/10 to-accent-500/10 dark:from-slate-400/10 dark:to-accent-400/10" />
                   
                   {/* Animated Background Pattern */}
                   <div className="absolute inset-0 opacity-20">
@@ -163,18 +163,18 @@ export default function Projects() {
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <project.icon className="w-16 h-16 text-blue-600 dark:text-blue-400" />
+                    <project.icon className="w-16 h-16 text-slate-600 dark:text-slate-400" />
                   </motion.div>
                   
                   {/* Status Badge */}
                   <div className="absolute top-4 left-4">
                     <motion.span 
-                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"
+                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400"
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ delay: 0.5 + index * 0.1 }}
                     >
-                      <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse" />
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse" />
                       {project.status}
                     </motion.span>
                   </div>
@@ -215,11 +215,11 @@ export default function Projects() {
                 {/* Project Content */}
                 <div className="p-6">
                   <div className="mb-4">
-                    <motion.h3 
-                      className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
-                      whileHover={{ x: 5 }}
-                      transition={{ duration: 0.2 }}
-                    >
+                        <motion.h3 
+                          className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors"
+                          whileHover={{ x: 5 }}
+                          transition={{ duration: 0.2 }}
+                        >
                       {project.title}
                     </motion.h3>
                     <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
@@ -233,7 +233,7 @@ export default function Projects() {
                       {project.technologies.map((tech, techIndex) => (
                         <motion.span
                           key={techIndex}
-                          className="px-3 py-1 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full border border-blue-200 dark:border-blue-700 hover:scale-105 transition-transform duration-200"
+                          className="px-3 py-1 bg-gradient-to-r from-indigo-50 to-rose-50 dark:from-indigo-900/30 dark:to-rose-900/30 text-indigo-700 dark:text-indigo-300 text-xs font-medium rounded-full border border-indigo-200 dark:border-indigo-700 hover:scale-105 transition-transform duration-200"
                           whileHover={{ scale: 1.05 }}
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
@@ -249,7 +249,7 @@ export default function Projects() {
                   <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
                     <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
                       <motion.div 
-                        className="w-2 h-2 bg-green-500 rounded-full"
+                        className="w-2 h-2 bg-emerald-500 rounded-full"
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity }}
                       />
@@ -274,7 +274,7 @@ export default function Projects() {
                           href={project.demo}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 text-sm font-medium shadow-sm hover:shadow-md"
+                          className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-600 to-rose-600 text-white rounded-lg hover:from-indigo-700 hover:to-rose-700 transition-all duration-200 text-sm font-medium shadow-sm hover:shadow-md"
                         >
                           <FaExternalLinkAlt size={14} />
                           <span>Demo</span>
@@ -296,7 +296,7 @@ export default function Projects() {
               href="https://github.com/hiren-2911"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-indigo-600 to-rose-600 text-white rounded-xl font-medium hover:from-indigo-700 hover:to-rose-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <FaGithub size={20} />
               <span>View All Projects on GitHub</span>

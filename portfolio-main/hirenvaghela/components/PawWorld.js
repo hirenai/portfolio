@@ -10,6 +10,7 @@ import {
   FaPause
 } from "react-icons/fa";
 import { useClientOnly } from "@/hooks/useClientOnly";
+import { getCatInfo } from "../utils/portfolioData";
 
 export default function PawWorld() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -19,12 +20,14 @@ export default function PawWorld() {
     threshold: 0.1,
   });
 
+  // Get cat data from portfolio.json
+  const catInfo = getCatInfo();
 
   const catStats = [
-    { label: "Age", value: "6 Months", icon: FaBirthdayCake, color: "text-pink-500" },
-    { label: "Breed", value: "Persian Himalayan Mix", icon: FaPaw, color: "text-orange-500" },
-    { label: "Favorite Toy", value: "Feather Wand", icon: FaGamepad, color: "text-blue-500" },
-    { label: "Photos Taken", value: "1,247", icon: FaCamera, color: "text-purple-500" }
+    { label: "Age", value: catInfo.age, icon: FaBirthdayCake, color: "text-slate-600" },
+    { label: "Breed", value: catInfo.breed, icon: FaPaw, color: "text-neutral-600" },
+    { label: "Favorite Toy", value: catInfo.favoriteToys[0], icon: FaGamepad, color: "text-accent-600" },
+    { label: "Favorite Spot", value: catInfo.stats.favoriteSpot, icon: FaCamera, color: "text-slate-700" }
   ];
 
 
@@ -53,7 +56,7 @@ export default function PawWorld() {
 
 
   return (
-    <section id="paw-world" className="section-padding bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20">
+    <section id="paw-world" className="section-padding bg-gradient-to-br from-neutral-50 via-slate-50 to-neutral-100 dark:from-neutral-900 dark:via-slate-900/20 dark:to-neutral-800/20">
       <div className="container-custom">
         <motion.div
           ref={ref}
@@ -66,24 +69,26 @@ export default function PawWorld() {
             <h2 className="text-4xl md:text-5xl font-mono-bold mb-4">
               <span className="gradient-text">Paw World</span> 🐾
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Meet Nyra, my adorable feline companion who brings joy and chaos to my daily life
+            <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
+              Meet {catInfo.name}, my adorable feline companion who brings joy and chaos to my daily life
             </p>
           </motion.div>
 
           {/* Cat Introduction */}
           <motion.div variants={itemVariants} className="mb-16">
             <div className="card p-8 text-center">
-              <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 flex items-center justify-center">
-                <FaPaw className="w-16 h-16 text-white" />
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-lg">
+                <img 
+                  src="/images/nyra.jpg" 
+                  alt="Nyra the cat" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-3xl font-mono-bold text-gray-900 dark:text-gray-100 mb-4">
-                Meet Nyra! 🐱
+              <h3 className="text-3xl font-mono-bold text-neutral-900 dark:text-neutral-100 mb-4">
+                Meet {catInfo.name}! 🐱
               </h3>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                Nyra is my beloved Persian Himalayan Mix who has been my coding companion for the past 6 Months. 
-                She's the perfect mix of playful, curious, and absolutely adorable. When I'm not debugging 
-                code, I'm usually taking photos of her or playing with her favorite feather wand.
+              <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto leading-relaxed">
+                {catInfo.story}
               </p>
             </div>
           </motion.div>
@@ -91,7 +96,7 @@ export default function PawWorld() {
           {/* Cat Stats */}
           <motion.div variants={itemVariants} className="mb-16">
             <h3 className="text-2xl font-mono-bold text-center text-gray-900 dark:text-gray-100 mb-8">
-              Nyra's Stats 📊
+              {catInfo.name}'s Stats 📊
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {catStats.map((stat, index) => (
@@ -121,7 +126,7 @@ export default function PawWorld() {
                 Live Cat Cam 🎥
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Check out Nyra's live feed (when she's not sleeping, that is!)
+                Check out {catInfo.name}'s live feed (when she's not sleeping, that is!)
               </p>
               <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 rounded-lg overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -131,7 +136,7 @@ export default function PawWorld() {
                       {isPlaying ? "Live Feed Active" : "Cat Cam Offline"}
                     </p>
                     <p className="text-sm text-gray-400 dark:text-gray-500 mt-2">
-                      Nyra is probably napping 😴
+                      {catInfo.name} is probably napping 😴
                     </p>
                   </div>
                 </div>

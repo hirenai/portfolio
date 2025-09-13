@@ -48,18 +48,18 @@ export default function Publications() {
   const getTypeColor = (type) => {
     switch (type) {
       case "Journal":
-        return "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200";
+        return "bg-accent-100 dark:bg-accent-900 text-accent-800 dark:text-accent-200";
       case "Conference":
-        return "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200";
+        return "bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200";
       case "Workshop":
-        return "bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200";
+        return "bg-neutral-100 dark:bg-neutral-700 text-neutral-800 dark:text-neutral-200";
       default:
-        return "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200";
+        return "bg-neutral-100 dark:bg-neutral-700 text-neutral-800 dark:text-neutral-200";
     }
   };
 
   return (
-    <section id="publications" className="section-padding bg-gray-50 dark:bg-gray-800">
+    <section id="publications" className="section-padding bg-neutral-50 dark:bg-neutral-800">
       <div className="container-custom">
         <motion.div
           ref={ref}
