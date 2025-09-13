@@ -11,7 +11,7 @@ export default function Content() {
                 <Image
                     className={styles.project_img}
                     src={finance_tracker}
-                    alt="project banner"
+                    alt="Finance Tracker project"
                 />
 
                 <div className={styles.project_content}>
@@ -36,7 +36,7 @@ export default function Content() {
                 <Image
                     className={styles.project_img}
                     src={crypto_tracker}
-                    alt="project banner"
+                    alt="Crypto Tracker project"
                 />
 
                 <div className={styles.project_content}>
@@ -61,7 +61,7 @@ export default function Content() {
                 <Image
                     className={styles.project_img}
                     src={password_manager}
-                    alt="project banner"
+                    alt="Password Manager project"
                 />
 
                 <div className={styles.project_content}>
