@@ -24,12 +24,10 @@ const createPlaceholderImage = (filename, title, color) => {
 };
 
 // Create placeholder images
-createPlaceholderImage('finance_tracker.png', 'Finance Tracker', '#4CAF50');
-createPlaceholderImage('crypto_tracker.png', 'Crypto Tracker', '#FF9800');
-createPlaceholderImage('password_manager.png', 'Password Manager', '#2196F3');
+// Note: Add your project placeholder images here
 
-console.log('\n🎉 Placeholder images created successfully!');
+console.log('\n🎉 Script completed!');
 console.log('\n📋 Next steps:');
-console.log('1. Replace these placeholder images with actual project screenshots');
+console.log('1. Add your project placeholder images to the script above');
 console.log('2. Run npm run build to test');
 console.log('3. Deploy to Netlify');
