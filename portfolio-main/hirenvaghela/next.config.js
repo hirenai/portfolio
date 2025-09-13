@@ -5,6 +5,7 @@ const nextConfig = {
         appDir: false
     },
     // Configuration for static export
+    output: 'export',
     trailingSlash: true,
     swcMinify: true,
     compiler: {
@@ -15,8 +16,6 @@ const nextConfig = {
         unoptimized: true,
         domains: ['images.unsplash.com', 'via.placeholder.com'],
     },
-    // Disable server-side features for static export
-    distDir: 'out',
     // Disable ESLint during build for deployment
     eslint: {
         ignoreDuringBuilds: true,
