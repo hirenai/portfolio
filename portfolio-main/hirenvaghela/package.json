@@ -11,7 +11,8 @@
         "setup": "node scripts/dev-setup.js",
         "deploy": "npm run build",
         "check-deployment": "node scripts/check-deployment.js",
-        "test-build": "node scripts/test-build.js"
+        "test-build": "node scripts/test-build.js",
+        "verify-deployment": "node scripts/verify-deployment.js"
     },
     "dependencies": {
         "@next/font": "13.1.5",
