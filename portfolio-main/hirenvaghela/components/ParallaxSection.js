@@ -60,3 +60,4 @@ export function ParallaxText({ children, speed = 0.1, className = "" }) {
     </motion.div>
   );
 }
+
