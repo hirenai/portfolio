@@ -21,8 +21,8 @@ export default function PawWorld() {
 
 
   const catStats = [
-    { label: "Age", value: "2 years", icon: FaBirthdayCake, color: "text-pink-500" },
-    { label: "Breed", value: "Maine Coon Mix", icon: FaPaw, color: "text-orange-500" },
+    { label: "Age", value: "6 Months", icon: FaBirthdayCake, color: "text-pink-500" },
+    { label: "Breed", value: "Persian Himalayan Mix", icon: FaPaw, color: "text-orange-500" },
     { label: "Favorite Toy", value: "Feather Wand", icon: FaGamepad, color: "text-blue-500" },
     { label: "Photos Taken", value: "1,247", icon: FaCamera, color: "text-purple-500" }
   ];
@@ -81,7 +81,7 @@ export default function PawWorld() {
                 Meet Nyra! 🐱
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                Nyra is my beloved Maine Coon mix who has been my coding companion for the past 2 years. 
+                Nyra is my beloved Persian Himalayan Mix who has been my coding companion for the past 6 Months. 
                 She's the perfect mix of playful, curious, and absolutely adorable. When I'm not debugging 
                 code, I'm usually taking photos of her or playing with her favorite feather wand.
               </p>

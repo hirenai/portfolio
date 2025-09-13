@@ -27,7 +27,8 @@ export default function Projects() {
       github: "https://github.com/hiren-2911/Number_detection_using_color_segmentation",
       demo: "#",
       featured: true,
-      icon: FaBrain
+      icon: FaBrain,
+      status: "completed"
     },
     {
       id: 2,
@@ -39,7 +40,8 @@ export default function Projects() {
       github: "#",
       demo: "#",
       featured: true,
-      icon: FaBrain
+      icon: FaBrain,
+      status: "completed"
     },
     {
       id: 3,
@@ -51,7 +53,8 @@ export default function Projects() {
       github: "#",
       demo: "#",
       featured: true,
-      icon: FaBrain
+      icon: FaBrain,
+      status: "completed"
     },
     {
       id: 4,
@@ -63,9 +66,11 @@ export default function Projects() {
       github: "#",
       demo: "#",
       featured: true,
-      icon: FaBrain
+      icon: FaBrain,
+      status: "completed"
     }
   ];
+
 
 
   const containerVariants = {
@@ -92,8 +97,14 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="section-padding bg-white dark:bg-gray-900">
-      <div className="container-custom">
+    <section id="projects" className="section-padding bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 right-10 w-72 h-72 bg-blue-200/20 dark:bg-blue-400/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-purple-200/20 dark:bg-purple-400/10 rounded-full blur-3xl" />
+      </div>
+      
+      <div className="container-custom relative z-10">
         <motion.div
           ref={ref}
           variants={containerVariants}
@@ -102,72 +113,115 @@ export default function Projects() {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full mb-6">
-              <FaCode className="w-8 h-8 text-blue-600 dark:text-blue-400" />
-            </div>
+            <motion.div 
+              className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-full mb-6"
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              transition={{ duration: 0.3 }}
+            >
+              <FaCode className="w-10 h-10 text-blue-600 dark:text-blue-400" />
+            </motion.div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              My <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Projects</span>
+              My <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Projects</span>
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <motion.p 
+              className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+            >
               A curated collection of AI/ML and computer vision projects showcasing innovative solutions and technical expertise
-            </p>
+            </motion.p>
           </motion.div>
+
 
 
           {/* Projects Grid */}
           <motion.div 
-            variants={containerVariants}
             className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto"
+            variants={containerVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
           >
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
                 variants={itemVariants}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700"
+                className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200/50 dark:border-gray-700/50"
               >
                 {/* Project Header with Icon */}
-                <div className="relative h-32 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-800 dark:via-purple-900/20 dark:to-pink-900/20 flex items-center justify-center">
+                <div className="relative h-40 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-800 dark:via-purple-900/20 dark:to-pink-900/20 flex items-center justify-center overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-400/10 dark:to-purple-400/10" />
-                  <div className="relative z-10">
-                    <project.icon className="w-12 h-12 text-blue-600 dark:text-blue-400" />
+                  
+                  {/* Animated Background Pattern */}
+                  <div className="absolute inset-0 opacity-20">
+                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 animate-pulse" />
+                  </div>
+                  
+                  <motion.div 
+                    className="relative z-10"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <project.icon className="w-16 h-16 text-blue-600 dark:text-blue-400" />
+                  </motion.div>
+                  
+                  {/* Status Badge */}
+                  <div className="absolute top-4 left-4">
+                    <motion.span 
+                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: 0.5 + index * 0.1 }}
+                    >
+                      <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse" />
+                      {project.status}
+                    </motion.span>
                   </div>
                   
                   {/* Floating Action Buttons */}
-                  <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  <motion.div 
+                    className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-all duration-300"
+                    initial={{ y: -10 }}
+                    whileHover={{ y: 0 }}
+                  >
                     <motion.a
-                      whileHover={{ scale: 1.1 }}
+                      whileHover={{ scale: 1.1, rotate: 5 }}
                       whileTap={{ scale: 0.9 }}
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 bg-white/90 dark:bg-gray-800/90 rounded-full shadow-md hover:shadow-lg transition-all duration-200"
+                      className="p-3 bg-white/90 dark:bg-gray-800/90 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 backdrop-blur-sm"
                       aria-label="View GitHub Repository"
                     >
                       <FaGithub size={16} className="text-gray-700 dark:text-gray-300" />
                     </motion.a>
                     {project.demo && project.demo !== "#" && (
                       <motion.a
-                        whileHover={{ scale: 1.1 }}
+                        whileHover={{ scale: 1.1, rotate: -5 }}
                         whileTap={{ scale: 0.9 }}
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 bg-white/90 dark:bg-gray-800/90 rounded-full shadow-md hover:shadow-lg transition-all duration-200"
+                        className="p-3 bg-white/90 dark:bg-gray-800/90 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 backdrop-blur-sm"
                         aria-label="View Live Demo"
                       >
                         <FaExternalLinkAlt size={16} className="text-gray-700 dark:text-gray-300" />
                       </motion.a>
                     )}
-                  </div>
+                  </motion.div>
                 </div>
 
                 {/* Project Content */}
                 <div className="p-6">
                   <div className="mb-4">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <motion.h3 
+                      className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
+                      whileHover={{ x: 5 }}
+                      transition={{ duration: 0.2 }}
+                    >
                       {project.title}
-                    </h3>
+                    </motion.h3>
                     <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                       {project.description}
                     </p>
@@ -177,42 +231,50 @@ export default function Projects() {
                   <div className="mb-6">
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, techIndex) => (
-                        <span
+                        <motion.span
                           key={techIndex}
-                          className="px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full border border-blue-200 dark:border-blue-700"
+                          className="px-3 py-1 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full border border-blue-200 dark:border-blue-700 hover:scale-105 transition-transform duration-200"
+                          whileHover={{ scale: 1.05 }}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: 0.6 + techIndex * 0.1 }}
                         >
                           {tech}
-                        </span>
+                        </motion.span>
                       ))}
                     </div>
                   </div>
 
                   {/* Action Buttons */}
                   <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
-                    <div className="flex items-center space-x-1 text-sm text-gray-500 dark:text-gray-400">
-                      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                    <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
+                      <motion.div 
+                        className="w-2 h-2 bg-green-500 rounded-full"
+                        animate={{ scale: [1, 1.2, 1] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      />
                       <span>AI/ML Project</span>
                     </div>
                     <div className="flex space-x-3">
                       <motion.a
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: 1.05, y: -2 }}
                         whileTap={{ scale: 0.95 }}
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors text-sm font-medium"
+                        className="flex items-center space-x-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-200 text-sm font-medium shadow-sm hover:shadow-md"
                       >
                         <FaGithub size={14} />
                         <span>Code</span>
                       </motion.a>
                       {project.demo && project.demo !== "#" && (
                         <motion.a
-                          whileHover={{ scale: 1.05 }}
+                          whileHover={{ scale: 1.05, y: -2 }}
                           whileTap={{ scale: 0.95 }}
                           href={project.demo}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                          className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 text-sm font-medium shadow-sm hover:shadow-md"
                         >
                           <FaExternalLinkAlt size={14} />
                           <span>Demo</span>
@@ -224,6 +286,7 @@ export default function Projects() {
               </motion.div>
             ))}
           </motion.div>
+
 
           {/* View More Button */}
           <motion.div variants={itemVariants} className="text-center mt-16">
