@@ -10,7 +10,8 @@
         "lint": "next lint",
         "setup": "node scripts/dev-setup.js",
         "deploy": "npm run build && npm run export",
-        "check-deployment": "node scripts/check-deployment.js"
+        "check-deployment": "node scripts/check-deployment.js",
+        "test-build": "node scripts/test-build.js"
     },
     "dependencies": {
         "@next/font": "13.1.5",
